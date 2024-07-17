@@ -15,5 +15,5 @@ class UserSerializer(serializers.ModelSerializer):
 class AccomplishmentSerializer(serializers.ModelSerializer):
   class Meta:
     model = Accomplishment
-    fields = '__all__'
+    fields = ['id', 'category', 'content', 'created_at', 'user']
     extra_kwargs = {'user': {'read_only': True}}
