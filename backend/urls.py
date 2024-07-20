@@ -28,6 +28,12 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+from django.http import HttpResponse
+
+def test_view(request):
+    return HttpResponse("Test view working")
+
+
 urlpatterns = [
     path('', api_root, name='api-root'),
     path('admin/', admin.site.urls),
