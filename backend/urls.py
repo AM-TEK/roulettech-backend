@@ -29,7 +29,7 @@ from rest_framework_simplejwt.views import (
 )
 
 urlpatterns = [
-    path('', api_root, name='home'),
+    path('', api_root, name='api-root'),
     path('admin/', admin.site.urls),
     path('api/user/register/', CreateUserView.as_view(), name='register'),
     path('api/token/', TokenObtainPairView.as_view(), name='get_token'),
