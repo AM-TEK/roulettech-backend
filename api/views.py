@@ -47,6 +47,7 @@ from rest_framework.reverse import reverse
 
 @api_view(['GET'])
 def api_root(request, format=None):
+      print("API root function called")
     return Response({
         'user-registration': reverse('register', request=request, format=format),
         'token': reverse('get_token', request=request, format=format),
